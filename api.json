@@ -1,0 +1,192 @@
+{
+    "categoria":[
+        {
+            "id": 1,
+            "nome": "Bolos"
+        },
+        {
+            "id": 2,
+            "nome": "Doces"
+        },
+        {
+            "id": 3,
+            "nome": "Tortas"
+        },
+        {
+            "id": 4,
+            "nome": "Cupcakes"
+        },
+        {
+            "id": 5,
+            "nome": "Pães Doces"
+        }
+        
+    ],
+    "produto":[
+        {
+            "id": 1,
+            "id_categoria": 1,
+            "nome": "Bolo de Chocolate",
+            "descricao": "Bolo de chocolate úmido com cobertura de ganache de chocolate.",
+            "preco": 10.00,
+            "img": "https://www.estadao.com.br/resizer/bnSXilRbkNPM_OMXVdPBjSEvdrI=/720x503/filters:format(jpg):quality(80):focal(448x342:458x352)/cloudfront-us-east-1.images.arcpublishing.com/estadao/25HQQTDV6RCY3B44ZJ7VLCSB5M.jpg"
+        },
+        {
+            "id": 2,
+            "id_categoria": 1,
+            "nome": "Bolo de Morango",
+            "descricao": "Bolo de morango fresco com cobertura de chantilly e morangos.",
+            "preco": 10.00,
+            "img": "https://img.cybercook.com.br/receitas/12/bolo-de-morango-3-840x480.jpeg?q=75"
+        },
+        {
+            "id": 3,
+            "id_categoria": 1,
+            "nome": "Bolo de Baunilha",
+            "descricao": "Bolo de Baunilha leve",
+            "preco": 10.00,
+            "img": "https://www.receiteria.com.br/wp-content/uploads/bolo-de-baunilha-08-730x548.jpeg.webp"
+        },
+        {
+            "id": 4,
+            "id_categoria": 2,
+            "nome":"Brigadeiro",
+            "descricao": "Doce Brasileiro feito de leite condesado,chocolate e manteiga,enrolado em granulados de chocolate",
+            "preco": 5.00,
+            "img": "https://imgs.search.brave.com/KGnhjWNd4RC3ejCWLeexdMbfdrqXHOppTBfdh0i29e4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0JyaWdhZGVp/cm8uanBn"
+        },
+        {
+            "id": 5,
+            "id_categoria": 2,
+            "nome":"Beijinho",
+            "descricao": "Doce feito de leite condensado e coco enrollado em coco ralado.",
+            "preco": 5.00,
+            "img": "https://img.cybercook.com.br/imagens/receitas/803/beijinho-1-840x480.jpg?q=75"
+        },
+        {
+            "id": 6,
+            "id_categoria": 2,
+            "nome":"Trufa de chocolate",
+            "descricao": "Trufa de chocolate",
+            "preco": 5.00,
+            "img": "https://imgs.search.brave.com/ebOTYP4YHaxCpbGDQN0FvwauKzuN3Zg6OpYwoXV9Jdc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bW9udGFlbmNhbnRh/LmNvbS5ici93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNC8wOS90/cnVmYS1kZS1jaG9j/b2xhdGUtZGUtbWFy/YWN1amE1LmpwZw"
+        },
+        {
+            "id": 7,
+            "id_categoria": 3,
+            "nome":"Torta de Abobora",
+            "descricao": "Torta de abobora",
+            "preco": 10.00,
+            "img": "https://s2-receitas.glbimg.com/tNcU8Owxzn6QXgYuBzX9CP-jr-8=/0x0:652x434/984x0/smart/filters:strip_icc()/g.glbimg.com/og/gs/gsat5/f/thumbs/materia/2019/08/12/abobora.jpg0"
+        },
+        {
+            "id": 8,
+            "id_categoria": 3,
+            "nome":"Torta de Limão",
+            "descricao": "Torta de limao",
+            "preco": 10.00,
+            "img": "https://imgs.search.brave.com/eTCOMsy21cekwrOFI3c_N7eVdJjugm-aanjIUHIqC0w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29uZmVpdGVpcmFk/ZXN1Y2Vzc28uY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzEwL3RvcnRhbGlt/YW8tcmVjZWl0YTUu/anBn"
+        },
+        {
+            "id": 9,
+            "id_categoria": 3,
+            "nome":"Torta de Morango",
+            "descricao": "Torta de morango",
+            "preco": 10.00,
+            "img": "https://imgs.search.brave.com/CidI6ES2U6FFfkDjfVNBh41fjlr3MwnRkFP6ZEpZ2Hs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ndWlh/ZGFjb3ppbmhhLmNv/bS5ici93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMC8wNi90b3J0/YS1tb3Vzc2UtbW9y/YW5nby5qcGc"
+        },
+        {
+            "id": 10,
+            "id_categoria": 4,
+            "nome":"Cupcake de Chocolate",
+            "descricao": "Cupcake de Chocolate",
+            "preco": 5.00,
+            "img": "https://imgs.search.brave.com/U_o-da9xTKDcOUN9Egh4v1gF5ZBOXTLWMrzU8MI1KPE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtZXUtMDEua2Mt/dXNlcmNvbnRlbnQu/Y29tLzU1OWJiN2Qz/LTg4YTQtMDFjMS03/OWEzLWRkNGQ1YjJk/MmJiMC8xOGNiNmNm/MS0xMTA1LTRjYzMt/YWJjZi00NDg0MzVl/ZTkyOTEvTWFyeSUy/MEJlcnJ5JTIwQ2hv/Y29sYXRlJTIwQ3Vw/Y2FrZXMlMjAlMjAo/MTQpLmpwZz93PTM4/NDAmcT04NSZhdXRv/PWZvcm1hdCZsb3Nz/bGVzcz0x"
+        },
+        {
+            "id": 11,
+            "id_categoria": 4,
+            "nome":"Cupcake de Morango",
+            "descricao": "Cupcake de Morango",
+            "preco": 5.00,
+            "img": "https://imgs.search.brave.com/qAxPuQYf__fofnlALZiB_yyfBZIcBZ7tu4QjlF71UeI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC5z/dGF0aWcuY29tLmJy/L2JhbmNvZGVpbWFn/ZW5zL2F6L3FmL2Ew/L2F6cWZhMHdjbm84/aTZ2dGNmY2JxN2c5/enkuanBn"
+        },
+        {
+            "id": 12,
+            "id_categoria": 4,
+            "nome":"Cupcake de Banana",
+            "descricao": "Cupcake de Banana",
+            "preco": 5.00,
+            "img":"https://imgs.search.brave.com/VN-m8LVdTMQeZcCvORjGGJgQdQaKmQ28AAnUMisKQkI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVsaWNpb3NpLmNv/bS9pbWFnZXMvMzAw/LzMyMC9jdXBjYWtl/cy1kZS1wbGF0YW5v/LTY2NS5qcGc"
+        },
+        {
+            "id": 13,
+            "id_categoria": 5,
+            "nome":"Rosquinha de Canela",
+            "descricao": "Rosquinha de Canela",
+            "preco": 5.00,
+            "img":"https://imgs.search.brave.com/eWDQyuUHgGD2iBvzbhDqDY35ADjuOr6ZGQrPPPCTHnI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cmVjZWl0ZXJpYS5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/L3Jvc3F1aW5oYS1j/YXNlaXJhLWZyaXRh/LTktNzMweDU0OC5q/cGVn"
+        },
+        {
+            "id": 14,
+            "id_categoria": 5,
+            "nome":"Sonho",
+            "descricao": "Sonho",
+            "preco":5.00,
+            "img":"https://imgs.search.brave.com/dpNCSoQ02JoTeNl5zQgLQHGT2Kh4XjbQW-5Sg4Fcj0o/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2x1cnJwLmNv/bS9wcm9kL3JlY2lw/ZV9pbWFnZXMvdHJh/bnNjcmliZS9kZXNz/ZXJ0L1NvbmhvLndl/YnA_aW1wb2xpY3k9/c2x1cnJwLTIwMjEw/NjAxJndpZHRoPTEy/MDAmaGVpZ2h0PTY3/NQ"
+        },
+        {
+            "id": 15,
+            "id_categoria": 5,
+            "nome":"Pão de Mel",
+            "descricao": "Pão de mel",
+            "preco":5.00,
+            "img":"https://imgs.search.brave.com/9WWGbBkrHIYpqqlLqvMUqglfLWWiEBktlb3Cp6akFMM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/LnByYXRpY2Fici5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMTAvUCVDMyVB/M28tZGUtTWVsLTEw/MjR4NjgyLmpwZWc"
+        }
+    ],
+  
+    "usuarios":[{
+        "id": 1,
+        "login": "patrick",
+        "senha": "123",
+        "nome_usuario": "Patrick",
+        "data_nascimento": "01/06/2004",
+        "cpf": "111.111.111-11",
+        "celular": "(11) 11111-1111",
+        "email": "bqXpR@example.com",
+        "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+    }],
+    "favoritos":[{
+        "id": 1,
+        "id_produto": 1,
+        "id_usuario": 1
+    }],
+    "carrinho":[{
+        "id": 1,
+        "id_usuario": 1,
+        "itens":[
+            {
+                "id_produto": 1,
+                "quantidade": 1
+            }
+        ]
+    }],
+    "fretes":[{
+        "id": 1,
+        "descricao":"Frete Gratuito",
+        "preco": 0.00
+    }],
+    "compras":[{
+        "id": 1,
+        "id_usuario": 1,
+        "itens":[
+            {
+                "id_produto": 1,
+                "quantidade": 1
+            }
+        ],
+        "data_compra": "2022-01-01",
+        "status": "confirmado",
+        "frete_id": 1  
+    }]
+}
