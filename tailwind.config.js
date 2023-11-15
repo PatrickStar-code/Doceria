@@ -10,9 +10,13 @@ export default {
     extend: {
       colors: {
         'white-100': '#FEFEFE',
+        'bide-300': '#E7D6D5',
         'bide-400': '#a68673',
-        'bide-600': '#3d312f',
+        'bide-500': '#7e5f4e',
+        'bide-600': '#492f02',
+        'bide-700': '#3d312f',
         'text-color': '#ddcfca',
+        'base-100': '#F3ACB2',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
