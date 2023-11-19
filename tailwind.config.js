@@ -6,8 +6,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "node_modules/keep-react/**/*.{js,jsx,ts,tsx}"
   ],
+
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'HighGrid': 'repeat(4, minmax(0, 320px))',
+      },
       colors: {
         'white-100': '#FEFEFE',
         'bide-300': '#E7D6D5',
@@ -16,13 +20,15 @@ export default {
         'bide-600': '#492f02',
         'bide-700': '#3d312f',
         'text-color': '#ddcfca',
-        'base-100': '#F3ACB2',
+        // 'bide-350': '#F3ACB2',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         cookie: ['Cookie', 'cursive'],
+        jost : ['Jost', 'sans-serif'],
       },
     },
   },
   presets: [keepPreset],
+  plugins: [require('daisyui')]
 };

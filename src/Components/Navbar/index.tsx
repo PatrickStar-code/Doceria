@@ -1,6 +1,7 @@
-import { Navbar } from "keep-react";
+import { Button, Dropdown, Navbar, TextInput } from "keep-react";
 import { Link } from "react-router-dom";
-
+import { Avatar } from "keep-react";
+import { CaretRight, ShoppingCartSimple } from "phosphor-react";
 export function NavbarComponent() {
   return (
     <nav className="sticky top-0 z-50">
@@ -17,8 +18,8 @@ export function NavbarComponent() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Navbar.Link linkName="Projects" />
-            <Navbar.Link linkName="Blogs" />
+            <Navbar.Link linkName="Produtos" />
+            <Navbar.Link linkName="Sobre nós" />
           </Navbar.Container>
           <Navbar.Brand>
             <img
@@ -35,10 +36,8 @@ export function NavbarComponent() {
               <Link to={"/"}>
                 <li>Home</li>
               </Link>
-              <Navbar.Link linkName="Projects" />
-              <Navbar.Link linkName="Blogs" />
-              <Navbar.Link linkName="News" />
-              <Navbar.Link linkName="Resources" />
+              <Navbar.Link linkName="Produtos" />
+              <Navbar.Link linkName="Sobre nós" />
             </Navbar.Container>
           </Navbar.Collapse>
 
@@ -47,8 +46,37 @@ export function NavbarComponent() {
               tag="ul"
               className="lg:flex hidden items-center justify-between gap-5"
             >
-              <Navbar.Link linkName="News" />
-              <Navbar.Link linkName="Resources" />
+              {/* Se Logado */}
+              <div className="flex gap-8 items-center">
+                <ShoppingCartSimple size={28} className="mb-3 cursor-pointer" weight="light" />
+                <div className="dropdown">
+                  <label tabIndex={0} className="m-1">
+                    <Avatar
+                      shape="circle"
+                      size="md"
+                      img="/images/avatar/avatar-4.png"
+                      className="cursor-pointer"
+                    />
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <a>Item 1</a>
+                    </li>
+                    <li>
+                      <a>Item 2</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Se não */}
+              {/* <div className="flex gap-4">
+                <Button size="md" type="outlineGray">Registrar</Button>
+                <Button size="md" type="outlinePrimary">Logar</Button>
+              </div> */}
             </Navbar.Container>
 
             <Navbar.Toggle />
