@@ -1,16 +1,19 @@
-import { Highlight_products } from "./Components/highlight_products";
+import { useContext } from "react";
+import { CartContext } from "../../Context/ContextProvider";
+import { Highlight_products_card } from "./Components/highlight_products";
 
 
 export function Home() {
+  const { HighlightProducts } = useContext(CartContext);
   return (
     <>
       <section>
         <div className="py-16 bg-bide-600">
           <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
             <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-              <div className="md:5/12 lg:w-5/12">
+              <div className="md:5/12 lg:w-5/12 h-50">
                 <img
-                  src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+                  src="Trufas.png"
                   alt="image"
                   loading="lazy"
                   width=""
@@ -19,7 +22,7 @@ export function Home() {
               </div>
               <div className="md:7/12 lg:w-6/12">
                 <h2 className="text-2xl text-bide-300 font-bold md:text-4xl">
-                  Nuxt development is carried out by passionate developers
+                Saboreie a doçura da vida com nossos doces irresistíveis!
                 </h2>
                 <p className="mt-6 text-white">
                  
@@ -41,10 +44,13 @@ export function Home() {
           <h1 className="text-10xl font-medium mb-6 text-center color-bide-600 font-cookie">Destaques</h1>
 
           <div className="grid grid-cols-2  lg:grid-cols-HighGrid  gap-6 justify-center">
+              {HighlightProducts.map((product) => (
+                <Highlight_products_card key={product.id} product={product}/>
+              ))}
+              {/* <Highlight_products/>
               <Highlight_products/>
               <Highlight_products/>
-              <Highlight_products/>
-              <Highlight_products/>
+              <Highlight_products/> */}
           </div>
       </section>
         <section className="w-full  bg-no-repeat  bg-cover bg-right  py-32 bg-[url(Cake.png)]">

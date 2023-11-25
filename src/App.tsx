@@ -1,12 +1,13 @@
-import {HashRouter} from "react-router-dom"
-import { Router } from "./DefaultLayout/Routes"
+import { HashRouter } from "react-router-dom";
+import { Router } from "./DefaultLayout/Routes";
+import { ContextProvider } from "./Context/ContextProvider";
 
 export function App() {
-
   return (
-    <HashRouter basename="/">
-      <Router />
-    </HashRouter>
-  )
+    <ContextProvider>
+      <HashRouter basename="/">
+        <Router />
+      </HashRouter>
+    </ContextProvider>
+  );
 }
-

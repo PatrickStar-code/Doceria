@@ -29,6 +29,5 @@ export default {
       },
     },
   },
-  presets: [keepPreset],
-  plugins: [require('daisyui')]
+  presets: [keepPreset]
 };
