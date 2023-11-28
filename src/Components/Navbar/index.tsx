@@ -1,4 +1,4 @@
-import {Dropdown, Navbar} from "keep-react";
+import { Dropdown, Navbar } from "keep-react";
 import { Link } from "react-router-dom";
 import {
   CaretRight,
@@ -26,7 +26,9 @@ export function NavbarComponent() {
               <li>Home</li>
             </Link>
             <Navbar.Link linkName="Produtos" />
-            <Navbar.Link linkName="Sobre nós" />
+            <Link to={"/sobre"}>
+              <li>Sobre</li>
+            </Link>
           </Navbar.Container>
           <Navbar.Brand>
             <img
@@ -44,11 +46,11 @@ export function NavbarComponent() {
                 <li>Home</li>
               </Link>
               <Navbar.Link linkName="Produtos" />
-              <Navbar.Link linkName="Sobre nós" />
+              <Link to={"/sobre"}>
+                <li>Sobre</li>
+              </Link>
             </Navbar.Container>
           </Navbar.Collapse>
-
-        
 
           <Navbar.Container className="flex items-center gap-3">
             <Navbar.Container
@@ -109,15 +111,14 @@ export function NavbarComponent() {
                   </Dropdown.Item>
                 </Dropdown>
                 <div className="relative">
-                <div className="absolute w-4  bottom-[12px] left-[12px] rounded-full bg-green-100 ">
-                  <span className="text-sm font-bold p-1">0</span>
-                </div>
+                  <div className="absolute w-4  bottom-[12px] left-[12px] rounded-full bg-green-100 ">
+                    <span className="text-sm font-bold p-1">0</span>
+                  </div>
                   <ShoppingCartSimple
                     size={24}
                     className=" cursor-pointer"
                     weight="light"
                   />
-                  
                 </div>
               </div>
 
@@ -128,15 +129,22 @@ export function NavbarComponent() {
               </div> */}
             </Navbar.Container>
 
-            <Navbar.Container tag="ul" className="flex lg:hidden items-center mr-8 gap-8 align-center justify-center">
+            <Navbar.Container
+              tag="ul"
+              className="flex lg:hidden items-center mr-8 gap-8 align-center justify-center"
+            >
               <User size={20} className="cursor-pointer" />
-              <ShoppingCartSimple
-                size={20}
-                className=" cursor-pointer"
-                weight="light"
-              />
+              <div className="relative">
+                  <div className="absolute w-4  bottom-[12px] left-[12px] rounded-full bg-green-100 ">
+                    <span className="text-sm font-bold p-1">0</span>
+                  </div>
+                  <ShoppingCartSimple
+                    size={24}
+                    className=" cursor-pointer"
+                    weight="light"
+                  />
+                </div>
             </Navbar.Container>
-            
 
             <Navbar.Toggle />
           </Navbar.Container>

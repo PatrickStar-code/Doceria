@@ -25,7 +25,7 @@ export function Highlight_products_card({product }: {product: ProductProps} ) {
               <span className="pr-2">
                 <ShoppingCart size={24} />
               </span>
-              Add To Cart
+                Adicionar
             </Button>
           </Card.Container>
         </Card.Container>
