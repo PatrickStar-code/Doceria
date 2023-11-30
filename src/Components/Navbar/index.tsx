@@ -9,7 +9,26 @@ import {
   SquaresFour,
   User,
 } from "phosphor-react";
+import {FaCandyCane,FaChartPie} from "react-icons/fa";
+import {GiCupcake,GiGingerbreadMan,GiCakeSlice} from "react-icons/gi";
+import { ReactNode, useContext } from "react";
+import { Context } from "../../Context/ContextProvider";
+type IconGalery = {
+  [key: string]: ReactNode;
+}
+const IconGalery: IconGalery = {
+  "Bolos": <GiCakeSlice/>,
+  "Tortas": <FaChartPie/>,
+  "Doces": <FaCandyCane/>,
+  "Pães Doces": <GiGingerbreadMan/>,
+  "Cupcakes": <GiCupcake/>,
+}
+
+
 export function NavbarComponent() {
+
+  const{ Categorias } = useContext(Context)
+
   return (
     <nav className="sticky top-0 z-50">
       <Navbar
@@ -25,7 +44,23 @@ export function NavbarComponent() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Navbar.Link linkName="Produtos" />
+            <Link to={"/produtos"}>
+              <Dropdown
+                label="Produtos"
+                dismissOnClick={true}
+                color="gray"
+                trigger="hover"
+              >
+                {Categorias?.map((item) => (
+                  <Dropdown.Item
+                    key={item.id}
+                    icon={IconGalery[item.nome]}
+                  >
+                    {item.nome}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown>
+            </Link>
             <Link to={"/sobre"}>
               <li>Sobre</li>
             </Link>
@@ -45,7 +80,9 @@ export function NavbarComponent() {
               <Link to={"/"}>
                 <li>Home</li>
               </Link>
-              <Navbar.Link linkName="Produtos" />
+              <Link to={"/produtos"}>
+                <li>Produtos</li>
+              </Link>
               <Link to={"/sobre"}>
                 <li>Sobre</li>
               </Link>
@@ -135,15 +172,15 @@ export function NavbarComponent() {
             >
               <User size={20} className="cursor-pointer" />
               <div className="relative">
-                  <div className="absolute w-4  bottom-[12px] left-[12px] rounded-full bg-green-100 ">
-                    <span className="text-sm font-bold p-1">0</span>
-                  </div>
-                  <ShoppingCartSimple
-                    size={24}
-                    className=" cursor-pointer"
-                    weight="light"
-                  />
+                <div className="absolute w-4  bottom-[12px] left-[12px] rounded-full bg-green-100 ">
+                  <span className="text-sm font-bold p-1">0</span>
                 </div>
+                <ShoppingCartSimple
+                  size={24}
+                  className=" cursor-pointer"
+                  weight="light"
+                />
+              </div>
             </Navbar.Container>
 
             <Navbar.Toggle />

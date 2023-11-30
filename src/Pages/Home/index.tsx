@@ -1,10 +1,9 @@
 import { useContext } from "react";
-import { CartContext } from "../../Context/ContextProvider";
+import { Context } from "../../Context/ContextProvider";
 import { Highlight_products_card } from "./Components/highlight_products";
 
-
 export function Home() {
-  const { HighlightProducts } = useContext(CartContext);
+  const { HighlightProducts } = useContext(Context);
   return (
     <>
       <section>

@@ -11,14 +11,22 @@ export interface ProductProps {
     "img": string
 }
 
-interface CartContextProps {
-    HighlightProducts: ProductProps[];
+interface CategoryProps {
+    "id": number,
+    "nome": string
 }
 
-export const CartContext = createContext({} as CartContextProps);
+interface CartContextProps {
+    HighlightProducts: ProductProps[];
+    Categorias: CategoryProps[];
+}
+
+
+export const Context = createContext({} as CartContextProps);
 
 export function ContextProvider({ children }: any) {
   const [HighlightProducts, setHighlightProducts] = useState([]);
+  const [Categorias, setCategorias] = useState([]);
 
   function getHighlits() {
     instance
@@ -31,10 +39,22 @@ export function ContextProvider({ children }: any) {
       });
   }
 
+  function getCategorias() {
+    instance
+      .get("/categoria")
+      .then((response) => {
+        setCategorias(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   useEffect(() => {
     getHighlits();
+    getCategorias();
   }, []);
 
 
-  return <CartContext.Provider value={{HighlightProducts}}>{children}</CartContext.Provider>;
+  return <Context.Provider value={{HighlightProducts, Categorias}}>{children}</Context.Provider>;
 }
