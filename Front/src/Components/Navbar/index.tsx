@@ -9,25 +9,23 @@ import {
   SquaresFour,
   User,
 } from "phosphor-react";
-import {FaCandyCane,FaChartPie} from "react-icons/fa";
-import {GiCupcake,GiGingerbreadMan,GiCakeSlice} from "react-icons/gi";
+import { FaCandyCane, FaChartPie } from "react-icons/fa";
+import { GiCupcake, GiGingerbreadMan, GiCakeSlice } from "react-icons/gi";
 import { ReactNode, useContext } from "react";
 import { Context } from "../../Context/ContextProvider";
 type IconGalery = {
   [key: string]: ReactNode;
-}
+};
 const IconGalery: IconGalery = {
-  "Bolos": <GiCakeSlice/>,
-  "Tortas": <FaChartPie/>,
-  "Doces": <FaCandyCane/>,
-  "Pães Doces": <GiGingerbreadMan/>,
-  "Cupcakes": <GiCupcake/>,
-}
-
+  Bolos: <GiCakeSlice />,
+  Tortas: <FaChartPie />,
+  Doces: <FaCandyCane />,
+  "Pães Doces": <GiGingerbreadMan />,
+  Cupcakes: <GiCupcake />,
+};
 
 export function NavbarComponent() {
-
-  const{ Categorias } = useContext(Context)
+  const { Categorias } = useContext(Context);
 
   return (
     <nav className="sticky top-0 z-50">
@@ -44,7 +42,7 @@ export function NavbarComponent() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to={"/produtos"}>
+            <Link to={"/categoria"}>
               <Dropdown
                 label="Produtos"
                 dismissOnClick={true}
@@ -52,12 +50,11 @@ export function NavbarComponent() {
                 trigger="hover"
               >
                 {Categorias?.map((item) => (
-                  <Dropdown.Item
-                    key={item.id}
-                    icon={IconGalery[item.nome]}
-                  >
-                    {item.nome}
+                  <Link to={"/categoria/"+item.nome}>
+                  <Dropdown.Item  icon={IconGalery[item.nome]}>
+                   {item.nome}
                   </Dropdown.Item>
+                  </Link>
                 ))}
               </Dropdown>
             </Link>
@@ -80,7 +77,7 @@ export function NavbarComponent() {
               <Link to={"/"}>
                 <li>Home</li>
               </Link>
-              <Link to={"/produtos"}>
+              <Link to={"/categorias"}>
                 <li>Produtos</li>
               </Link>
               <Link to={"/sobre"}>

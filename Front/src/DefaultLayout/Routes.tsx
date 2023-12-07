@@ -3,7 +3,7 @@ import { Layout } from "./Layout";
 import { Home } from "../Pages/Home";
 import { Sobre } from "../Pages/Sobre";
 import { Produtos } from "../Pages/Produtos";
-import { ProductCategory } from "../Pages/Products";
+import { ProductCategory } from "../Pages/Products/ProductCategory";
 import { useContext } from "react";
 import { Context } from "../Context/ContextProvider";
 

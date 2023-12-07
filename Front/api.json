@@ -2,23 +2,31 @@
     "categoria":[
         {
             "id": 1,
-            "nome": "Bolos"
+            "nome": "Bolos",
+            "img_categoria":"https://www.imagensempng.com.br/wp-content/uploads/2021/07/06-7.png"
         },
         {
             "id": 2,
-            "nome": "Doces"
+            "nome": "Doces",
+            "img_categoria":"https://imagensemoldes.com.br/wp-content/uploads/2020/05/Beijinho-Doces-PNG.png"
+            
         },
         {
             "id": 3,
-            "nome": "Tortas"
+            "nome": "Tortas",
+            "img_categoria":"https://www.imagensempng.com.br/wp-content/uploads/2022/06/978241.png"
+
         },
         {
             "id": 4,
-            "nome": "Cupcakes"
+            "nome": "Cupcakes",
+            "img_categoria":"https://www.imagensempng.com.br/wp-content/uploads/2022/08/757-2.png"
+
         },
         {
             "id": 5,
-            "nome": "Pães Doces"
+            "nome": "Pães Doces",
+            "img_categoria":"https://www.imagensempng.com.br/wp-content/uploads/2021/07/06-7.png"
         }
         
     ],

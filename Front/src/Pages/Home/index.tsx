@@ -3,7 +3,7 @@ import { Context } from "../../Context/ContextProvider";
 import { Highlight_products_card } from "./Components/highlight_products";
 
 export function Home() {
-  const { HighlightProducts } = useContext(Context);
+  const { ProdutosDestaque } = useContext(Context);
   return (
     <>
       <section>
@@ -43,7 +43,7 @@ export function Home() {
           <h1 className="text-10xl font-medium mb-6 text-center color-bide-600 font-cookie">Destaques</h1>
 
           <div className="grid grid-cols-2  lg:grid-cols-HighGrid md:ml-11 gap-6  justify-center">
-              {HighlightProducts.map((product) => (
+              {ProdutosDestaque.map((product) => (
                 <Highlight_products_card key={product.id} product={product}/>
               ))}
           </div>
