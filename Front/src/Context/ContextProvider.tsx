@@ -31,7 +31,7 @@ export function ContextProvider({ children }: any) {
 
   function getHighlits() {
     instance
-      .get("/produto/?destaque=true&_limit=4")
+      .get("/home")
       .then((response) => {
         setProdutosDestaque(response.data);
       })
