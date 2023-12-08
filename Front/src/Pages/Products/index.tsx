@@ -6,7 +6,8 @@ export function ProductCategory() {
     const {categoria} = useParams()
     const {Categorias} = useContext(Context)
     const isValid = !Categorias.length || Categorias.some((item) => item.nome === categoria)
-    return !isValid && <Navigate to="/"/>
+    return !isValid && <Navigate to="/categoria"/>
+    
 
     return(
         <div>
