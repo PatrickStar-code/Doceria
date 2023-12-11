@@ -1,5 +1,5 @@
 import { Dropdown, Navbar } from "keep-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   CaretRight,
   Gear,
@@ -26,6 +26,7 @@ const IconGalery: IconGalery = {
 
 export function NavbarComponent() {
   const { Categorias } = useContext(Context);
+  const navigate = useNavigate();
 
   return (
     <nav className="sticky top-0 z-50">
@@ -42,22 +43,19 @@ export function NavbarComponent() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to={"/categoria"}>
               <Dropdown
-                label="Produtos"
+                label="Categorias"
                 dismissOnClick={true}
                 color="gray"
                 trigger="hover"
+                onClick={() => navigate("/categoria")}
               >
                 {Categorias?.map((item) => (
-                  <Link to={"/categoria/"+item.nome}>
-                  <Dropdown.Item  icon={IconGalery[item.nome]}>
+                  <Dropdown.Item  icon={IconGalery[item.nome]} onClick={() => navigate(`/categoria/${item.nome}`)} key={item.id}>
                    {item.nome}
                   </Dropdown.Item>
-                  </Link>
                 ))}
               </Dropdown>
-            </Link>
             <Link to={"/sobre"}>
               <li>Sobre</li>
             </Link>
@@ -77,8 +75,8 @@ export function NavbarComponent() {
               <Link to={"/"}>
                 <li>Home</li>
               </Link>
-              <Link to={"/categorias"}>
-                <li>Produtos</li>
+              <Link to={"/categoria"}>
+                <li>Categorias</li>
               </Link>
               <Link to={"/sobre"}>
                 <li>Sobre</li>

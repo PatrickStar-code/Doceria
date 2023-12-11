@@ -20,6 +20,9 @@ export interface CategoryProps {
 interface CartContextProps {
     ProdutosDestaque: ProductProps[];
     Categorias: CategoryProps[];
+    ProdutosCategoria: ProductProps[];
+    getProdutosCategoria: (categoriaId: number) => void;
+    
 }
 
 
@@ -27,13 +30,25 @@ export const Context = createContext({} as CartContextProps);
 
 export function ContextProvider({ children }: any) {
   const [ProdutosDestaque, setProdutosDestaque] = useState([]);
+  const [ProdutosCategoria, setProdutosCategoria] = useState([]);
   const [Categorias, setCategorias] = useState([]);
 
-  function getHighlits() {
+  function getProdutosDestaque() {
     instance
-      .get("/home")
+      .get("/produto?destaque=true")
       .then((response) => {
         setProdutosDestaque(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function getProdutosCategoria(categoriaId: number) {
+    instance
+      .get("/produto?id_categoria=" + categoriaId)
+      .then((response) => {
+        setProdutosCategoria(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -52,10 +67,10 @@ export function ContextProvider({ children }: any) {
   }
 
   useEffect(() => {
-    getHighlits();
+    getProdutosDestaque();
     getCategorias();
   }, []);
 
 
-  return <Context.Provider value={{ProdutosDestaque, Categorias}}>{children}</Context.Provider>;
+  return <Context.Provider value={{ProdutosDestaque, Categorias,ProdutosCategoria,getProdutosCategoria}}>{children}</Context.Provider>;
 }

@@ -1,7 +1,7 @@
 import { Button, Card } from "keep-react";
 import { Heart, ShoppingCart } from "phosphor-react";
 import { ProductProps } from "../../../../Context/ContextProvider";
-export function Highlight_products_card({product }: {product: ProductProps} ) {
+export function Product_card({product }: {product: ProductProps} ) {
     return (
         <Card
         className="max-w-xs overflow-hidden rounded-md"
