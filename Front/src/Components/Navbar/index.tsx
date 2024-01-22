@@ -43,19 +43,6 @@ export function NavbarComponent() {
             <Link to="/">
               <li>Home</li>
             </Link>
-              <Dropdown
-                label="Categorias"
-                dismissOnClick={true}
-                color="gray"
-                trigger="hover"
-                onClick={() => navigate("/categoria")}
-              >
-                {Categorias?.map((item) => (
-                  <Dropdown.Item  icon={IconGalery[item.nome]} onClick={() => navigate(`/categoria/${item.nome}`)} key={item.id}>
-                   {item.nome}
-                  </Dropdown.Item>
-                ))}
-              </Dropdown>
             <Link to={"/sobre"}>
               <li>Sobre</li>
             </Link>

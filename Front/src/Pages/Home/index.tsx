@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../Context/ContextProvider";
-import { Produtros_card } from "../../Components/Produtos_Card.tsx";
+import { Carousel} from "keep-react";
 
 
 export function Home() {
@@ -35,36 +35,32 @@ export function Home() {
         </div>
       </section>
 
-      <div className="w-full bg-bide-300">
+      <div className="w-full">
         <img src="waves.svg" alt="" width={"100%"} />
       </div>
-      <section className="bg-bide-300 w-full ">
-        <h1 className="text-10xl font-medium mb-6 text-center color-bide-600 font-cookie">
-          Destaques
-        </h1>
 
-        <div className="grid grid-cols-2  lg:grid-cols-HighGrid md:ml-11 gap-6  justify-center">
-          {ProdutosDestaque.map((product) => (
-            <Produtros_card key={product.id} product={product}  />
-          ))}
+      {/* <section className="mt-[-8px]">
+        <h1 className="font-cookie text-10xl text-center">Categorias</h1>
+        <div className="flex justify-center">
+                {}
         </div>
-      </section>
-   
-      <section className="w-full  bg-no-repeat  bg-cover bg-left  py-32 bg-[url(Cake.png)]">
-        <div className="container mx-auto text-center text-white h-52">
-          <h1 className="text-9xl font-medium mb-4 font-cookie text-bide-600">
-            Doce é a Vida
-          </h1>
-
-          <p className="text-2xl text-bide-600 mb-12 text-center ">
-            Mas com nosso doces, ela fica ainda mais saborasa.
-          </p>
-          <a
-            href="#"
-            className="bg-bide-600 text-white py-4 px-12 rounded-full hover:bg-bide-500"
-          >
-            Explorar
-          </a>
+      </section> */}
+      
+    <section className="container mx-auto mt-[-2rem]">
+        <h2 className="text-10xl font-cookie text-center">Categorias</h2>
+      <div className="mt-10">
+        <ul className="-m-3.5 flex">
+          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl" ></li>
+          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
+          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
+          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
+        </ul>
+      </div>
+    </section>
+      <section className="mt-[-8px]">
+        <h1 className="font-cookie text-10xl text-center">Os mais Pedidos</h1>
+        <div className="flex justify-center">
+                {}
         </div>
       </section>
     </>
