@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Context } from "../../Context/ContextProvider";
-import { Carousel} from "keep-react";
-
+import { CardCategoria } from "./Components/Categoria_card";
+import { Produtos_destaque } from "./Components/Produtos_destaque";
 
 export function Home() {
-  const { ProdutosDestaque } = useContext(Context);
+  const { ProdutosDestaque,Categorias } = useContext(Context);
   return (
     <>
       <section>
@@ -34,10 +34,10 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      <div className="w-full">
+      <div className="w-full bg-bide-300">
         <img src="waves.svg" alt="" width={"100%"} />
       </div>
+
 
       {/* <section className="mt-[-8px]">
         <h1 className="font-cookie text-10xl text-center">Categorias</h1>
@@ -48,20 +48,20 @@ export function Home() {
       
     <section className="container mx-auto mt-[-2rem]">
         <h2 className="text-10xl font-cookie text-center">Categorias</h2>
-      <div className="mt-10">
-        <ul className="-m-3.5 flex">
-          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl" ></li>
-          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-          <li className="m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-        </ul>
+        <div className="flex  gap-6 py-6">
+        {Categorias.map((item, index) => (
+            <CardCategoria key={index} Categoria={item} />
+        ))}
       </div>
     </section>
-      <section className="mt-[-8px]">
+      <section className="container mx-auto mt-[2rem]">
         <h1 className="font-cookie text-10xl text-center">Os mais Pedidos</h1>
-        <div className="flex justify-center">
-                {}
-        </div>
+        <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4 lg:mt-16">
+      {ProdutosDestaque?.map((item) => (
+        <Produtos_destaque key={item.id} produto={item} />
+      ))}
+      
+      </div>
       </section>
     </>
   );
